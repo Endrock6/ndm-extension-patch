@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NDM Ignore List Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="img/icon128.png" alt="">
+      <div>
+        <h1>NDM Ignore Lists</h1>
+        <p class="subtitle">Keep downloads with your browser on the sites and file types below.</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2><span class="step">1</span> Ignored domains</h2>
+      <p class="help">One domain per line. NDM will not intercept anything from these sites.</p>
+      <p class="help">Subdomains match automatically (e.g. "example.com" also matches "api.example.com").</p>
+      <textarea id="domains" spellcheck="false" placeholder="example.com&#10;api.example.com"></textarea>
+      <div class="actions">
+        <button class="btn-primary" id="saveDomains">Save domains</button>
+        <button class="btn-secondary" id="resetDomains">Reset domains</button>
+      </div>
+      <div class="status" id="domainStatus"></div>
+    </section>
+
+    <section class="card">
+      <h2><span class="step">2</span> Blocked file types</h2>
+      <p class="help">One extension per line (e.g. <code>data</code>). These are never intercepted, on any site.</p>
+      <textarea id="extensions" spellcheck="false" placeholder="data"></textarea>
+      <div class="actions">
+        <button class="btn-primary" id="saveExtensions">Save file types</button>
+        <button class="btn-secondary" id="resetExtensions">Reset file types</button>
+      </div>
+      <div class="status" id="extensionStatus"></div>
+    </section>
+
+    <section class="card">
+      <h2>Defaults (always active)</h2>
+      <p class="help">Domains:</p>
+      <div class="chips" id="defaultDomains"></div>
+      <p class="help">File types:</p>
+      <div class="chips" id="defaultExtensions"></div>
+      <p class="note">Saved changes apply immediately — no need to reload the extension.</p>
+    </section>
+  </div>
+
+  <script src="ignore-lists.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

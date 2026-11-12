@@ -1,0 +1,39 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "img/icon16.png"
+      }
+   },
+   "author": "Javad Motallebi",
+   "background": {
+      "service_worker": "bg.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "ct.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Sends Download Links to Neat Download Manager",
+   "homepage_url": "https://www.neatdownloadmanager.com/",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAg/CrDxzbqRSJIsoRYB/e/jJ5gf36vLfglv4LlNiCx5p/JzG9RId0JTolOV27Kqvd5KybX+egu/w5loxyZy+epAHNMCu9ziSKi+Mq7pT4ObJ2tMH8ilN0Dwjv0ZOo3UMMPW6PkIP7wjvON3TazfB3Q8HStFY1nqTqlYQYex3SGGF9ca3TNw3MzempdLQgacMJgdyDS2QXwKy8J5jdSjHBR1pP8RzH5ZVP7xLIJCdgcSm7XApokRg12NPsMtM9znq6hx9oI0BjkxfjhhLyeFKloboxhyhb7lSXBBJAJb9Nxe2o6/1aS52w2NpmTLwZjzW8yA/uyM15kEkECEgddwJaewIDAQAB",
+   "manifest_version": 3,
+   "name": "NeatDownloadManager Extension",
+   "options_ui": {
+      "page": "options.html",
+      "open_in_tab": true
+   },
+   "permissions": [ "webRequest", "webNavigation", "cookies", "contextMenus", "storage", "downloads" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.9.92",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "img/icon16.png", "img/icon16_2x.png", "img/close16.png", "img/close16_2x.png" ]
+   } ]
+}
