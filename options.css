@@ -233,34 +233,6 @@ button:focus-visible {
   }
 }
 
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 0 0 16px;
-}
-
-.chips:last-child {
-  margin-bottom: 0;
-}
-
-.chip {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 11px;
-  border-radius: 999px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  color: var(--text);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 12.5px;
-}
-
-.chip.empty {
-  color: var(--muted);
-  font-style: italic;
-}
-
 .note {
   margin: 18px 0 0;
   padding-top: 16px;

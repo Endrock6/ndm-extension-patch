@@ -55,9 +55,9 @@ var DEFAULT_BLOCKED_EXTENSIONS = [
 - Defaults and user-added entries are merged; defaults cannot be removed via the
   options page (edit the file to change them).
 
-## Pre-Populated
-- Domain: `commandcode.ai`, `api.commandcode.ai`
-- File type: `data`
+## Defaults
+Both lists ship empty. Add entries from the options page, or edit the arrays in
+`ignore-lists.js` if you want them applied to every install.
 
 ## How to Revert
 Delete the unpacked extension in `brave://extensions` and re-enable the original.

@@ -1,29 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const $ = (id) => document.getElementById(id);
 
-  // ---- defaults display ----
-  const defDomains = (typeof DEFAULT_IGNORE_DOMAINS !== 'undefined') ? DEFAULT_IGNORE_DOMAINS : [];
-  const defExts = (typeof DEFAULT_BLOCKED_EXTENSIONS !== 'undefined') ? DEFAULT_BLOCKED_EXTENSIONS : [];
-
-  function renderChips(el, items) {
-    if (!items.length) {
-      const empty = document.createElement('span');
-      empty.className = 'chip empty';
-      empty.textContent = 'none';
-      el.appendChild(empty);
-      return;
-    }
-    items.forEach((item) => {
-      const chip = document.createElement('span');
-      chip.className = 'chip';
-      chip.textContent = item;
-      el.appendChild(chip);
-    });
-  }
-
-  renderChips($('defaultDomains'), defDomains);
-  renderChips($('defaultExtensions'), defExts);
-
   // ---- load saved values ----
   chrome.storage.local.get(['ignoreDomains', 'blockedExtensions'], (result) => {
     $('domains').value = (result.ignoreDomains || []).join('\n');

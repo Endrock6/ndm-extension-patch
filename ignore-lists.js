@@ -17,11 +17,7 @@
 // ---- 1. DOMAINS ----
 // Subdomains match automatically: 'example.com' also covers 'api.example.com'.
 var DEFAULT_IGNORE_DOMAINS = [
-  // Confirmed problematic — serves .data files during page navigation.
-  'commandcode.ai',
-  'api.commandcode.ai',
-
-  // Add your own below:
+  // Ships empty. Add your own below:
   // 'raw.githubusercontent.com',
   // 'gist.githubusercontent.com',
 ];
@@ -35,9 +31,7 @@ var DEFAULT_IGNORE_DOMAINS = [
 // Careful: these apply on EVERY site, so only list extensions you never
 // want a download manager to grab.
 var DEFAULT_BLOCKED_EXTENSIONS = [
-  'data',   // API routes like /settings/billing.data (commandcode.ai)
-
-  // Common ones people hit — uncomment if they get grabbed:
+  // Ships empty. Common ones people hit — uncomment if they get grabbed:
   // 'csv',
   // 'log',
   // 'bin',
